@@ -1,0 +1,30 @@
+{
+  "name": "bkp",
+  "version": "1.0.0",
+  "description": "(Bounded) Knapsack problem",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lo-entreprise/bkp.git"
+  },
+  "keywords": [
+    "Bounded",
+    "Knapsack",
+    "Problem",
+    "Solve",
+    "Dynamic",
+    "Programming"
+  ],
+  "author": "lo-entreprise",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lo-entreprise/bkp/issues"
+  },
+  "homepage": "https://github.com/lo-entreprise/bkp#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
