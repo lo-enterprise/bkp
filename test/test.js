@@ -1,6 +1,33 @@
 var bkp = require('../index.js');
 
 var assert = require('assert');
+
+describe('Problem of the coffee machine', function() {
+    describe('Return the maximum number of coins with change 1x1, 1x2, 1x3, 1x4 and 1x5', function() {
+        var list = [
+            { name: '1', weight: 1, value: 1, pieces: 1 },
+            { name: '2', weight: 2, value: 2, pieces: 1 },
+            { name: '3', weight: 3, value: 3, pieces: 1 },
+            { name: '4', weight: 4, value: 4, pieces: 1 },
+            { name: '5', weight: 5, value: 5, pieces: 1 },
+        ];
+
+        it('If ask 8 should be 1x1, 1x3 and 1x4', function() {
+            var expected = {
+                "totalWeight": 8,
+                "totalValue": 8,
+                "items": [
+                    { "count": 1, "item": "1" },
+                    { "count": 1, "item": "3" },
+                    { "count": 1, "item": "4" },
+                ]
+            };
+
+            assert.deepEqual(expected, bkp.Bounded(list, 8));
+        });
+    });
+});
+
 describe('A tourist wants to make a good trip at the weekend with his friends. They will go to the mountains to see the wonders of nature. So he needs some items during the trip. Food, clothing, etc. He has a good knapsack for carrying the things, but he knows that he can carry only 4 kg weight in his knapsack, because they will make the trip from morning to evening. He creates a list of what he wants to bring for the trip, but the total weight of all items is too much. He adds a value to each item. The value represents how important the thing for the tourist. The list contains which items are the wanted things for the trip, what is the weight and value of an item, and how many units does he have from each items. ', function() {
     describe('The tourist can choose to take any combination of items from the list, and some number of each item is available (see the column "Piece(s)" of the list!). He may not cut the items, so he can only take whole units of any item.', function() {
         var list = [
