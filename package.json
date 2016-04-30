@@ -42,9 +42,9 @@
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run coverage && npm run check-coverage"
     }
-  },
-  "ghooks": {
-    "pre-commit": "npm run coverage && npm run check-coverage"
   }
 }
