@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/lo-enterprise/bkp.svg?branch=master)](https://travis-ci.org/lo-enterprise/bkp) [![Coverage Status](https://coveralls.io/repos/github/lo-enterprise/bkp/badge.svg?branch=master)](https://coveralls.io/github/lo-enterprise/bkp?branch=master)
+[![Build Status](https://travis-ci.org/lo-enterprise/bkp.svg?branch=master)](https://travis-ci.org/lo-enterprise/bkp) [![Coverage Status](https://coveralls.io/repos/github/lo-enterprise/bkp/badge.svg?branch=master)](https://coveralls.io/github/lo-enterprise/bkp?branch=master) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
 
 
 The knapsack problem or rucksack problem is a problem in combinatorial optimization: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible. It derives its name from the problem faced by someone who is constrained by a fixed-size knapsack and must fill it with the most valuable items.
