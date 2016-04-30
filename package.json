@@ -37,8 +37,10 @@
     "mocha": "^2.4.5",
     "semantic-release": "^4.3.5"
   },
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "ghooks": {
     "pre-commit": "npm run coverage && npm run check-coverage"
