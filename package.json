@@ -1,15 +1,16 @@
 {
   "name": "bkp",
-  "version": "2.0.0-dev",
   "description": "(Bounded) Knapsack problem",
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
-    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lo-enterprise/bkp.git"
+    "url": "https://github.com/lo-enterprise/bkp.git"
   },
   "keywords": [
     "Bounded",
@@ -26,8 +27,14 @@
   },
   "homepage": "https://github.com/lo-enterprise/bkp#readme",
   "devDependencies": {
+    "commitizen": "^2.8.1",
     "coveralls": "^2.11.9",
+    "cz-conventional-changelog": "^1.1.6",
     "istanbul": "^0.4.3",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
