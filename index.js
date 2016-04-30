@@ -39,7 +39,7 @@ module.exports.Bounded = function(data, maxWeight) {
     var val = 0;
     for (var i = 0; i < best.length; i++) {
         if (0 == best[i]) continue;
-        result[result.length] = { count: best[i], item: data[i].name };
+        result[result.length] = { count: best[i], item: data[i].item };
         wgt += best[i] * data[i].weight;
         val += best[i] * data[i].value;
     }
