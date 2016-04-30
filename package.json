@@ -6,7 +6,9 @@
     "test": "mocha test",
     "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "report-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
@@ -30,11 +32,15 @@
     "commitizen": "^2.8.1",
     "coveralls": "^2.11.9",
     "cz-conventional-changelog": "^1.1.6",
+    "ghooks": "^1.2.1",
     "istanbul": "^0.4.3",
     "mocha": "^2.4.5",
     "semantic-release": "^4.3.5"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "ghooks": {
+    "pre-commit": "npm run coverage && npm run check-coverage"
   }
 }
