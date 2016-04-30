@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/lo-enterprise/bkp#readme",
   "devDependencies": {
+    "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
     "mocha": "^2.4.5"
   }
